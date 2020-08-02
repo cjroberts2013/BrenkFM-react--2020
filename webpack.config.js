@@ -1,4 +1,4 @@
-
+const webpack = require('webpack');
 const path = require('path');
 
 // entry -> output
@@ -24,5 +24,9 @@ module.exports = {
             ]
         }
         ]
+    },
+    devServer: {
+        contentBase: path.join(__dirname, 'public'),
+        historyApiFallback: true
     }
 };
